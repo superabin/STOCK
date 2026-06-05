@@ -24,31 +24,21 @@
 
 ## 🎯 核心研究主軸
 
-<table width="100%" style="border-collapse: collapse; border: none; margin: 20px 0;">
-  <tr style="background: none;">
-    <td width="33%" align="center" valign="top" style="border: none; padding: 15px;">
-      <div style="font-size: 2.5rem; margin-bottom: 10px;">🏗️</div>
-      <h3 style="margin-top: 5px; color: #2c3e50;">營建產業追蹤</h3>
-      <p style="font-size: 0.9em; line-height: 1.6; color: #666; text-align: justify;">
-        追蹤指標建案之推案進度、完工入帳時程，以及各建商的土地儲備與未來獲利能見度，掌握營建股的入帳黃金期。
-      </p>
-    </td>
-    <td width="33%" align="center" valign="top" style="border: none; padding: 15px; border-left: 1px solid #eee; border-right: 1px solid #eee;">
-      <div style="font-size: 2.5rem; margin-bottom: 10px;">📊</div>
-      <h3 style="margin-top: 5px; color: #2c3e50;">財務數據分析</h3>
-      <p style="font-size: 0.9em; line-height: 1.6; color: #666; text-align: justify;">
-        整理歷年 EPS、股利政策、營收趨勢及合理本益比評價區間，以嚴謹的數據篩選出兼具成長性與高安全邊際的價值股。
-      </p>
-    </td>
-    <td width="33%" align="center" valign="top" style="border: none; padding: 15px;">
-      <div style="font-size: 2.5rem; margin-bottom: 10px;">💡</div>
-      <h3 style="margin-top: 5px; color: #2c3e50;">投資邏輯筆記</h3>
-      <p style="font-size: 0.9em; line-height: 1.6; color: #666; text-align: justify;">
-        記錄長線投資心法、政策影響分析（如信用管制、囤房稅），以及三大法人與主力籌碼的動向觀察。
-      </p>
-    </td>
-  </tr>
-</table>
+<!-- 馬卡龍粉彩三欄卡片 (綠、藍、紫) -->
+<div class="macaron-grid">
+  <div class="macaron-card macaron-green">
+    <h3>🏗️ 營建產業追蹤</h3>
+    <p>追蹤指標建案之推案進度、完工入帳時程，以及各建商的土地儲備與未來獲利能見度，掌握營建股的入帳黃金期。</p>
+  </div>
+  <div class="macaron-card macaron-blue">
+    <h3>📊 財務數據分析</h3>
+    <p>整理歷年 EPS、股利政策、營收趨勢及合理本益比評價區間，以嚴謹的數據篩選出兼具成長性與高安全邊際的價值股。</p>
+  </div>
+  <div class="macaron-card macaron-purple">
+    <h3>💡 投資邏輯筆記</h3>
+    <p>記錄長線投資心法、政策影響分析（如信用管制、囤房稅），以及三大法人與主力籌碼的動向觀察。</p>
+  </div>
+</div>
 
 ---
 
@@ -64,15 +54,19 @@
 
 ---
 
-## 📌 本月主打：華固 (2548) 個股亮點速覽
-
-> ### 🏆 營建資優生四大核心底氣
-> * **驚人的獲利穩定度**：2025年 EPS 繳出 **10.15 元**，歷史第 12 度大賺一個股本，2026年推案量充足。
-> * **法人資金護航**：市值近 400 億，具備極佳流動性，為高股息 ETF 必備標配，填息力道強。
-> * **商辦雙軌佈局**：大幅提高北市商辦與廠辦比重，避開住宅市場信用管制及打房風頭。
-> * **品牌與高周轉率**：品牌力強、建案銷況與交屋效率極高，資金調度穩健。
->
-> 👉 想了解更多估值與詳細推案分析？請閱讀完整的 [華固 (2548) 深度研究報告](202606/華固(2548).md)。
+<!-- 馬卡龍粉紅特色卡片 (粉紅) -->
+<div class="macaron-card macaron-pink">
+  <h3>🏆 本月主打：華固 (2548) 個股亮點速覽</h3>
+  <ul style="margin-top: 10px; padding-left: 20px; font-size: 0.95em; line-height: 1.7;">
+    <li><strong>驚人的獲利穩定度</strong>：2025年 EPS 繳出 <strong>10.15 元</strong>，歷史第 12 度大賺一個股本，2026年推案量充足。</li>
+    <li><strong>法人資金護航</strong>：市值近 400 億，具備極佳流動性，為高股息 ETF 必備標配，填息力道強。</li>
+    <li><strong>商辦雙軌佈局</strong>：大幅提高北市商辦與廠辦比重，避開住宅市場信用管制及打房風頭。</li>
+    <li><strong>品牌與高周轉率</strong>：品牌力強、建案銷況與交屋效率極高，資金調度穩健。</li>
+  </ul>
+  <p style="margin-top: 15px; font-size: 0.95em; font-weight: 500;">
+    👉 想了解更多估值與詳細推案分析？請閱讀完整的 <a href="#/202606/華固(2548)" style="color: inherit; text-decoration: underline;">華固 (2548) 深度研究報告</a>。
+  </p>
+</div>
 
 ---
 

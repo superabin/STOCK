@@ -3,7 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <title>STOCK 投資研究室</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 引入 Google Fonts 提升排版質感 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 引入亮暗色主題 CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+  
+  <style>
+    /* 自訂字體與部分版面細節微調 */
+    body {
+      font-family: 'Inter', 'Segoe UI', 'Microsoft JhengHei', sans-serif !important;
+    }
+    .markdown-section {
+      max-width: 900px !important; /* 寬度稍微放寬，提升閱讀舒適度 */
+      padding: 30px 45px 40px 45px !important;
+    }
+    /* 使 HTML 表格在暗色模式下也有好看的邊框 */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 2rem 0;
+    }
+    th, td {
+      border: 1px solid var(--borderColor, #e2e2e2);
+      padding: 12px 15px;
+    }
+    /* 覆寫部分自訂表格邊框以實現首頁 3 欄無邊框卡片效果 */
+    .markdown-section table[style*="border: none"] td,
+    .markdown-section table[style*="border: none"] tr {
+      border: none !important;
+    }
+
+    /* ==========================================================================
+       馬卡龍粉彩風格自訂卡片 (Macaron Pastel Cards)
+       ========================================================================== */
+    .macaron-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+    .macaron-card {
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    .macaron-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    }
+    .macaron-card h3 {
+      margin-top: 0 !important;
+      font-weight: 600;
+    }
+    .macaron-card p {
+      font-size: 0.9em;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* 亮色模式馬卡龍配色 (Light Mode Pastel Colors) */
+    .macaron-green {
+      background-color: #e8f8f5 !important;
+      color: #16a085 !important;
+    }
+    .macaron-green h3 { color: #16a085 !important; }
+    
+    .macaron-blue {
+      background-color: #ebf5fb !important;
+      color: #2980b9 !important;
+    }
+    .macaron-blue h3 { color: #2980b9 !important; }
+    
+    .macaron-pink {
+      background-color: #fdf2f4 !important;
+      color: #c0392b !important;
+    }
+    .macaron-pink h3 { color: #c0392b !important; }
+    
+    .macaron-purple {
+      background-color: #f5eef8 !important;
+      color: #8e44ad !important;
+    }
+    .macaron-purple h3 { color: #8e44ad !important; }
+
+    /* 暗色模式馬卡龍配色 (Dark Mode Pastel Colors Overrides) */
+    body.dark .macaron-green {
+      background-color: #0e201b !important;
+      color: #76d7c4 !important;
+      border-color: rgba(22, 160, 133, 0.2) !important;
+    }
+    body.dark .macaron-green h3 { color: #76d7c4 !important; }
+
+    body.dark .macaron-blue {
+      background-color: #0f1d2a !important;
+      color: #85c1e9 !important;
+      border-color: rgba(41, 128, 185, 0.2) !important;
+    }
+    body.dark .macaron-blue h3 { color: #85c1e9 !important; }
+
+    body.dark .macaron-pink {
+      background-color: #241417 !important;
+      color: #f1948a !important;
+      border-color: rgba(192, 57, 43, 0.2) !important;
+    }
+    body.dark .macaron-pink h3 { color: #f1948a !important; }
+
+    body.dark .macaron-purple {
+      background-color: #1a1224 !important;
+      color: #d7bde2 !important;
+      border-color: rgba(142, 68, 173, 0.2) !important;
+    }
+    body.dark .macaron-purple h3 { color: #d7bde2 !important; }
+  </style>
 </head>
 <body>
   <div id="app">載入中...</div>
@@ -13,12 +131,55 @@
       repo: 'superabin/STOCK',
       loadSidebar: true,
       subMaxLevel: 2,
-      // 👇 加入以下防快取設定，強迫瀏覽器和 GitHub 每次都抓最新的選單檔案
-      requestHeaders: {
-        'Cache-Control': 'no-cache'
+      // 搜尋插件設定
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜尋個股或報告...',
+        noData: '找不到相關內容',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+      // 亮暗主題插件設定 (馬卡龍粉彩風格配色)
+      darklightTheme: {
+        siteFont: 'Inter, "Segoe UI", "Microsoft JhengHei", sans-serif',
+        defaultTheme: 'light',
+        codeFontFamily: 'Consolas, Monaco, Courier New, monospace',
+        bodyFontSize: '17px',
+        dark: {
+          accent: '#8ec5fc', // 馬卡龍粉藍
+          toogleBackground: '#ffffff',
+          background: '#120e1a', // 馬卡龍深紫粉灰 (高質感暗色底)
+          textColor: '#cbd5e1',
+          codeTextColor: '#ff7597', // 粉紅程式碼字
+          codeBackgroundColor: '#1d1727',
+          borderColor: '#2d2538',
+          blockQuoteColor: '#8ec5fc',
+          highlightColor: '#ff7597',
+          sidebarSublink: '#94a3b8',
+          codeTypeColor: '#120e1a'
+        },
+        light: {
+          accent: '#ff7597', // 馬卡龍粉紅
+          toogleBackground: '#120e1a',
+          background: '#fffcfd', // 馬卡龍柔粉白
+          textColor: '#2c3e50',
+          codeTextColor: '#c0392b',
+          codeBackgroundColor: '#fdfbfc',
+          borderColor: '#f5eef1',
+          blockQuoteColor: '#ff7597',
+          highlightColor: '#ff7597',
+          sidebarSublink: '#5d6d7e',
+          codeTypeColor: '#ffffff'
+        }
       }
     }
   </script>
+  <!-- 核心 Docsify JS -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 搜尋插件 JS -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 亮暗色主題切換 JS -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
 </html>
