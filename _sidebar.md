@@ -1,3 +1,3 @@
-* [首頁](https://www.google.com/search?q=README.md)
+* [首頁]([https://www.google.com/search?q=README.md](https://superabin.github.io/STOCK/#/))
 * **2026年06月個股**
-* [華固 2548](https://www.google.com/search?q=202606%2F%E8%8F%AF%E5%9B%BA%282548%29.md)
+* [華固 2548]([https://www.google.com/search?q=202606%2F%E8%8F%AF%E5%9B%BA%282548%29.md](https://github.com/superabin/STOCK/blob/master/202606/%E8%8F%AF%E5%9B%BA(2548).md))
