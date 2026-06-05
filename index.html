@@ -11,8 +11,12 @@
     window.$docsify = {
       name: 'STOCK 研究室',
       repo: 'superabin/STOCK',
-      loadSidebar: true, // 確保這行有開
-      subMaxLevel: 2
+      loadSidebar: true,
+      subMaxLevel: 2,
+      // 👇 加入以下防快取設定，強迫瀏覽器和 GitHub 每次都抓最新的選單檔案
+      requestHeaders: {
+        'Cache-Control': 'no-cache'
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
